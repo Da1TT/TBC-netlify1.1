@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, ReactNode } from "react";
-import translations from "@/lib/translations";
+import translations from "../lib/translations";
 
 // Define types for our context
 type Language = "en" | "zh";

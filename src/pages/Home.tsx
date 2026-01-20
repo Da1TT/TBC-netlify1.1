@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import { Link } from "react-router-dom";
 
 export default function Home() {

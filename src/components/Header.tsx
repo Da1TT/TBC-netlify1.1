@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { cn } from "@/lib/utils";
+import { useLanguage } from "../contexts/LanguageContext";
+import { cn } from "../lib/utils";
 import { motion } from "framer-motion";
 
 export default function Header() {

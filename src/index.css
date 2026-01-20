@@ -26,12 +26,6 @@ body {
   flex-direction: column;
 }
 
-/* 确保Netlify部署时资源正确加载 */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* 优化滚动行为 */
 html {
   scroll-behavior: smooth;

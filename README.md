@@ -1,4 +1,56 @@
-# Tour & Business in China
+# Tour & Business in China - Deployment Guide
+
+## Netlify Deployment Steps
+
+### Prerequisites
+- A Netlify account
+- A GitHub repository containing your project code
+
+### Deployment Process
+
+1. **Connect your repository to Netlify**
+   - Go to [Netlify](https://app.netlify.com/) and sign in
+   - Click on "New site from Git"
+   - Select "GitHub" and authorize Netlify to access your repository
+   - Choose the repository containing your project code
+
+2. **Automatic Configuration**
+   - The project includes a `netlify.toml` file that will automatically configure:
+     - Build command: `npm ci --legacy-peer-deps && npm run build`
+     - Publish directory: `dist`
+     - Environment variables: NODE_VERSION=20
+
+3. **Deploy your site**
+   - Click on "Deploy site" to start the deployment process
+   - Wait for Netlify to build and deploy your site
+   - Once deployment is complete, you'll receive a unique URL for your site
+
+## Project Overview
+
+Tour & Business in China is a professional ground services provider dedicated to helping international visitors make the most of their time in China. The website offers information about:
+
+- Guided tours to historical and cultural sites
+- Exhibition support services for IT and technology events
+- Custom travel itineraries
+- Accommodation arrangements
+
+The site features a responsive design, multi-language support (English and Chinese), and a user-friendly interface to help visitors plan their trip to China.
+
+## Project Structure
+```
+├── src/                  # Source code directory
+│   ├── components/       # Reusable UI components
+│   ├── contexts/         # React context providers
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and libraries
+│   ├── pages/            # Page components
+│   ├── App.tsx           # Main application component
+│   ├── index.css         # Global styles
+│   ├── main.tsx          # Entry point
+├── netlify.toml          # Netlify configuration
+├── package.json          # Project dependencies and scripts
+└── README.md             # Project documentation
+```
 
 Professional ground services for international visitors to China. Offering tour guides, exhibition support, and customized travel solutions across major cities.
 

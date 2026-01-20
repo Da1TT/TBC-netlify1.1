@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
 
 // Types for exhibition data

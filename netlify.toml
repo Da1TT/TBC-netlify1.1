@@ -1,11 +1,11 @@
 # Netlify Configuration
 [build]
   # Set default build command to use npm
-  command = "npm install && npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   # Publish directory
   publish = "dist"
   # Environment variables
-  environment = { NODE_ENV = "production", NODE_VERSION = "20" }
+  environment = { NODE_ENV = "production", NODE_VERSION = "20", NPM_CONFIG_PRODUCTION = "false" }
 
 # Package manager configuration
 [functions]
