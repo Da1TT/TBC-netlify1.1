@@ -11,6 +11,9 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "install:ci": "npm ci --legacy-peer-deps"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.9.2",
