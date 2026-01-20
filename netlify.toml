@@ -1,7 +1,7 @@
 # Netlify Configuration
 [build]
-  # Set default build command to use npm
-  command = "npm ci --legacy-peer-deps && npm run build"
+  # 使用npm install代替npm ci，避免需要package-lock.json文件
+  command = "npm install --legacy-peer-deps && npm run build"
   # Publish directory
   publish = "dist"
   # Environment variables
@@ -9,7 +9,7 @@
 
 # Package manager configuration
 [package]
-  # Use npm instead of pnpm to avoid lockfile issues
+  # Use npm as the package manager
   manager = "npm"
 
 # Redirect all requests to index.html for SPA routing
