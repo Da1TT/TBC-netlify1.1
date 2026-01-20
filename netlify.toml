@@ -1,6 +1,6 @@
 # Netlify Configuration
 [build]
-  # Use Node 18 to support workspace protocol
+  # Build command
   command = "npm install --legacy-peer-deps && npm run build"
   # Publish directory
   publish = "dist"
@@ -17,34 +17,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Security headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-[build]
-  # Use Node 18 to support workspace protocol
-  command = "npm install --legacy-peer-deps && npm run build"
-  # Publish directory
-  publish = "dist"
-  # Environment variables
-  environment = { NODE_ENV = "production", NODE_VERSION = "18", NPM_CONFIG_PRODUCTION = "false" }
-
-# Package manager configuration
-[package]
-  # Use npm as the package manager
-  manager = "npm"
-
-# Redirect all requests to index.html for SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  force = true
 
 # Security headers
 [[headers]]
