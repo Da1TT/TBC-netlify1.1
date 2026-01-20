@@ -1,13 +1,23 @@
+# Netlify Configuration
 [build]
-  command = "npm run netlify-install && npm run build"
+  # Set default build command to use npm
+  command = "npm install && npm run build"
+  # Publish directory
   publish = "dist"
-  environment = { NODE_ENV = "production" }
+  # Environment variables
+  environment = { NODE_ENV = "production", NODE_VERSION = "20" }
 
+# Package manager configuration
+[functions]
+  node_bundler = "esbuild"
+
+# Redirect all requests to index.html for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
