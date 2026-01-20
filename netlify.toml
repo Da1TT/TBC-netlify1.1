@@ -8,8 +8,9 @@
   environment = { NODE_ENV = "production", NODE_VERSION = "20", NPM_CONFIG_PRODUCTION = "false" }
 
 # Package manager configuration
-[functions]
-  node_bundler = "esbuild"
+[package]
+  # Use npm instead of pnpm to avoid lockfile issues
+  manager = "npm"
 
 # Redirect all requests to index.html for SPA routing
 [[redirects]]
